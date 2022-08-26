@@ -9,7 +9,23 @@ def main():
     board = []
     board_width = int(input("Choose board width: "))
     board_height = int(input("Choose board height: "))
-    number_of_turns = int(input("Choose number of turns: "))
+    number_of_turns = 0
+    valid_input = False
+    while not valid_input:
+      difficulty = input("Choose your difficulty (Easy, Medium, or Hard): ")
+      if difficulty == "Easy":
+        number_of_turns = int(board_height * board_width - (board_height * board_width / 8))
+        valid_input = True
+      elif difficulty == "Medium":
+        number_of_turns = int(board_height * board_width - (board_height * board_width / 4))
+        valid_input = True
+      elif difficulty == "Hard":
+        number_of_turns = int(board_height * board_width - (board_height * board_width / 2))
+        valid_input = True
+      else:
+        print("Invalid option")
+    print()
+    print("You have %s turns." % number_of_turns)
     print()
     for x in range(board_height):
         board.append(["O"] * board_width)
