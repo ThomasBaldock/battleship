@@ -3,7 +3,7 @@
 from random import randint
 import os
 import sys
-
+TODO: #1 clean up code and leave comments
 def main():
     print()
     board = []
