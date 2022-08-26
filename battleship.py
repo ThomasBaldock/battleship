@@ -59,6 +59,7 @@ def main():
             board[guess_row - 1][guess_col -1] = "B"
             print_board(board)
             print("Congratulations! You sunk my battleship!")
+            print("https://www.youtube.com/watch?v=xJo1WVTjaB0")
             win_ending = input("Press Enter to play again, or any other key to quit: ")
             if win_ending == "":
                 os.system('cls' if os.name == 'nt' else 'clear')
